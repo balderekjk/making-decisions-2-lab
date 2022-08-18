@@ -28,7 +28,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
   Loop through the 'family' array and console.log every item.
 */
 
-//Code Here
+for (let i = 0; i < family.length; i++) {
+  console.log(family[i]);
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -42,6 +44,13 @@ let evensArr = [];
 */
 
 //Code Here
+for (let i = 0; i < nums.length; i++) {
+  if (nums[i] % 2 === 0) {
+    evensArr.push(nums[i]);
+  }
+}
+
+console.log(evensArr);
 
 ////////// PROBLEM 5 //////////
 
@@ -54,6 +63,17 @@ var score = 74;
 */
 
 //Code Here
+if (score >= 90) {
+  console.log('A');
+} else if (score >= 80 && score < 90) {
+  console.log('B');
+} else if (score >= 70 && score < 80) {
+  console.log('C');
+} else if (score >= 60 && score < 70) {
+  console.log('D');
+} else if (score < 60) {
+  console.log('F');
+}
 
 ////////// Intermediate Problems //////////
 
@@ -67,7 +87,8 @@ var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
   Create a variable named 'someNum' and set it equal to the fifth value of the 'myFavoriteNumbers' array.
 */
 
-//Code Here
+let someNum = myFavoriteNumbers[4];
+console.log(someNum);
 
 ////////// PROBLEM 7 //////////
 
@@ -76,6 +97,17 @@ var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 
 //Code Here
 
+// Subscripting non-existing element shows 'undefined'
+
+if (myFavoriteNumbers.length < 7) {
+  console.log('There are not enough elements in this array');
+} else if (myFavoriteNumbers.length > 7) {
+  someNum = myFavoriteNumbers[6];
+} else if (myFavoriteNumbers.length === 7) {
+  console.log("You've got exactly 7");
+}
+
+console.log(someNum);
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -85,6 +117,11 @@ var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
+for (let i = 0; i < listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log(listOfNumbers[i] + ' is divisible by 3');
+  }
+}
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
@@ -96,6 +133,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+for (let i = letters.length - 1; i >= 0; i--) {
+  console.log(letters[i]);
+}
 
 ////////// Advanced Problems //////////
 
@@ -117,6 +157,25 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+switch (letterGrade) {
+  case A:
+    console.log('Student is doing excellent');
+    break;
+  case B:
+    console.log('Student is doing well');
+    break;
+  case C:
+    console.log('Student is doing alright');
+    break;
+  case D:
+    console.log('Student is not doing very well');
+    break;
+  case F:
+    console.log('Student is failing');
+    break;
+  default:
+    console.log('Not Eligible');
+}
 
 ////////// PROBLEM 11 //////////
 /* The famous FizzBuzz, Devmountain style!
@@ -143,3 +202,14 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+for (let i = 1; i <= 100; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    console.log(DevMountain);
+  } else if (i % 5 === 0) {
+    console.log(mountain);
+  } else if (i % 3 === 0) {
+    console.log(Dev);
+  } else {
+    console.log(i);
+  }
+}
